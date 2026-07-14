@@ -29,9 +29,19 @@
       "order": 2,
       "createdAt": "2026-07-14T03:17:36.774Z",
       "updatedAt": "2026-07-14T03:17:36.774Z",
-      "files": [],
+      "files": [
+        {
+          "id": "cmrk4xf1900017icxgozitjem",
+          "filename": "1784002334297-InformeGrupal_Semana11_ARC.docx.pdf",
+          "originalName": "InformeGrupal_Semana11_ARC.docx.pdf",
+          "mimeType": "application/pdf",
+          "size": 601150,
+          "sectionId": "cmrk2z62u0000ucit5cdoea2g",
+          "createdAt": "2026-07-14T04:12:14.301Z"
+        }
+      ],
       "links": []
     }
   ],
-  "publishedAt": "2026-07-14T03:21:55.752Z"
+  "publishedAt": "2026-07-14T04:12:45.819Z"
 }
