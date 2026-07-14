@@ -145,49 +145,80 @@ export default function CourseClient({ sections }: CourseClientProps) {
                   
                   {expandedModules.includes(section.id) && (
                     <div className="bg-white">
-                      {/* Mostrar archivos */}
-                      {section.files.map((file) => (
-                        <button
-                          key={file.id}
-                          onClick={() => {
-                          const isImage = file.mimeType.startsWith('image/')
-                          const isPdf = file.mimeType === 'application/pdf'
-                          setSelectedContent({
-                            type: isImage ? 'image' : isPdf ? 'pdf' : 'module',
-                            title: file.originalName,
-                            url: `/api/uploads/${file.filename}`,
-                            section: section
-                          })
-                        }}
-                          className="w-full px-4 py-3 flex items-center gap-3 hover:bg-purple-50 transition-colors border-t border-gray-100"
-                        >
-                          {getLessonIcon(file.mimeType === 'application/pdf' ? 'pdf' : file.mimeType.startsWith('image/') ? 'image' : 'document')}
-                          <span className="text-sm text-gray-700 text-left">
-                            <div className="font-medium">{file.originalName}</div>
-                            <div className="text-xs text-gray-500">{formatFileSize(file.size)}</div>
-                          </span>
-                        </button>
-                      ))}
+                      {/* Mostrar archivos con sus enlaces asociados */}
+                      {section.files.map((file) => {
+                        const isImage = file.mimeType.startsWith('image/')
+                        const isPdf = file.mimeType === 'application/pdf'
+                        const relatedLinks = section.links.sort((a, b) => a.order - b.order)
+                        
+                        return (
+                          <div key={file.id} className="border-t border-gray-100">
+                            <button
+                              onClick={() => setSelectedContent({
+                                type: isImage ? 'image' : isPdf ? 'pdf' : 'module',
+                                title: file.originalName,
+                                url: `/api/uploads/${file.filename}`,
+                                section: section
+                              })}
+                              className="w-full px-4 py-3 flex items-center gap-3 hover:bg-purple-50 transition-colors"
+                            >
+                              {getLessonIcon(file.mimeType === 'application/pdf' ? 'pdf' : file.mimeType.startsWith('image/') ? 'image' : 'document')}
+                              <span className="text-sm text-gray-700 text-left">
+                                <div className="font-medium">{file.originalName}</div>
+                                <div className="text-xs text-gray-500">{formatFileSize(file.size)}</div>
+                              </span>
+                            </button>
+                            
+                            {/* Mostrar enlaces relacionados debajo del archivo */}
+                            {relatedLinks.length > 0 && (
+                              <div className="px-4 pb-3">
+                                <div className="text-xs text-gray-500 mb-1">Enlaces relacionados:</div>
+                                {relatedLinks.map((link) => (
+                                  <button
+                                    key={link.id}
+                                    onClick={() => setSelectedContent({
+                                      type: 'link',
+                                      title: link.title,
+                                      url: link.url,
+                                      section: section
+                                    })}
+                                    className="w-full pl-8 pr-4 py-2 flex items-center gap-2 hover:bg-purple-50 transition-colors rounded text-xs"
+                                  >
+                                    <svg className="w-3 h-3 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                                    </svg>
+                                    <span className="text-purple-700">{link.title}</span>
+                                  </button>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        )
+                      })}
                       
-                      {/* Mostrar enlaces */}
-                      {section.links.map((link) => (
-                        <button
-                          key={link.id}
-                          onClick={() => setSelectedContent({
-                            type: 'link',
-                            title: link.title,
-                            url: link.url,
-                            section: section
-                          })}
-                          className="w-full px-4 py-3 flex items-center gap-3 hover:bg-purple-50 transition-colors border-t border-gray-100"
-                        >
-                          {getLessonIcon('link')}
-                          <span className="text-sm text-gray-700 text-left">
-                            <div className="font-medium">{link.title}</div>
-                            <div className="text-xs text-gray-500">Enlace externo</div>
-                          </span>
-                        </button>
-                      ))}
+                      {/* Mostrar enlaces sin archivos asociados */}
+                      {section.files.length === 0 && section.links.length > 0 && (
+                        <div className="border-t border-gray-100">
+                          {section.links.sort((a, b) => a.order - b.order).map((link) => (
+                            <button
+                              key={link.id}
+                              onClick={() => setSelectedContent({
+                                type: 'link',
+                                title: link.title,
+                                url: link.url,
+                                section: section
+                              })}
+                              className="w-full px-4 py-3 flex items-center gap-3 hover:bg-purple-50 transition-colors"
+                            >
+                              {getLessonIcon('link')}
+                              <span className="text-sm text-gray-700 text-left">
+                                <div className="font-medium">{link.title}</div>
+                                <div className="text-xs text-gray-500">Enlace externo</div>
+                              </span>
+                            </button>
+                          ))}
+                        </div>
+                      )}
                       
                       {section.files.length === 0 && section.links.length === 0 && (
                         <div className="px-4 py-3 text-sm text-gray-500 border-t border-gray-100">
@@ -438,7 +469,7 @@ export default function CourseClient({ sections }: CourseClientProps) {
                             {/* Links associated with this file */}
                             {selectedContent.section.links.length > 0 && (
                               <div className="mt-4 pt-4 border-t border-gray-200">
-                                <p className="text-sm font-medium text-gray-700 mb-2">Enlaces relacionados:</p>
+                                <p className="text-sm font-medium text-gray-700 mb-2">Enlaces de ingreso:</p>
                                 <div className="space-y-2">
                                   {selectedContent.section.links
                                     .sort((a, b) => a.order - b.order)
