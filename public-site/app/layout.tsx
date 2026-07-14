@@ -19,13 +19,7 @@ export default function RootLayout({
             <div className="px-6 py-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-8">
-                  <h1 className="text-2xl font-bold text-gray-900">Big Data Learning Platform</h1>
-                  <nav className="hidden md:flex items-center gap-6">
-                    <a href="#" className="text-gray-600 hover:text-gray-900 font-medium">Home</a>
-                    <a href="#" className="text-gray-600 hover:text-gray-900 font-medium">Explore Courses</a>
-                    <a href="#" className="text-gray-600 hover:text-gray-900 font-medium">My Learning</a>
-                    <a href="#" className="text-gray-600 hover:text-gray-900 font-medium">About</a>
-                  </nav>
+                  <h1 className="text-2xl font-bold text-gray-900">Reyna Saravia Andrea</h1>
                 </div>
                 <div className="flex items-center gap-4">
                   <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">

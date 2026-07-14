@@ -18,8 +18,8 @@
 }
 
 body {
-  @apply bg-purple-50 text-gray-900 antialiased;
-  background: linear-gradient(135deg, #f3e8ff 0%, #faf5ff 50%, #f8fafc 100%);
+  @apply bg-gray-50 text-gray-900 antialiased;
+  background: linear-gradient(to bottom, #faf8ff, #f5f3ff);
   min-height: 100vh;
 }
 
