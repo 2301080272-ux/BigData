@@ -55,6 +55,15 @@ export async function GET(
       case 'gif':
         contentType = 'image/gif'
         break
+      case 'webp':
+        contentType = 'image/webp'
+        break
+      case 'svg':
+        contentType = 'image/svg+xml'
+        break
+      case 'bmp':
+        contentType = 'image/bmp'
+        break
       default:
         contentType = 'application/octet-stream'
     }

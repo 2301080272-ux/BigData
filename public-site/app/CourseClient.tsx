@@ -34,7 +34,7 @@ type CourseClientProps = {
 }
 
 export default function CourseClient({ sections }: CourseClientProps) {
-  const [selectedContent, setSelectedContent] = useState<{ type: 'pdf' | 'module' | 'link'; title: string; url?: string; section?: Section }>({
+  const [selectedContent, setSelectedContent] = useState<{ type: 'pdf' | 'image' | 'module' | 'link'; title: string; url?: string; section?: Section }>({
     type: 'module',
     title: sections.length > 0 ? sections[0].title : 'Sin contenido'
   })
@@ -74,6 +74,12 @@ export default function CourseClient({ sections }: CourseClientProps) {
         return (
           <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+        )
+      case 'image':
+        return (
+          <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
           </svg>
         )
       case 'link':
@@ -143,15 +149,19 @@ export default function CourseClient({ sections }: CourseClientProps) {
                       {section.files.map((file) => (
                         <button
                           key={file.id}
-                          onClick={() => setSelectedContent({
-                            type: file.mimeType === 'application/pdf' ? 'pdf' : 'module',
+                          onClick={() => {
+                          const isImage = file.mimeType.startsWith('image/')
+                          const isPdf = file.mimeType === 'application/pdf'
+                          setSelectedContent({
+                            type: isImage ? 'image' : isPdf ? 'pdf' : 'module',
                             title: file.originalName,
                             url: `/api/uploads/${file.filename}`,
                             section: section
-                          })}
+                          })
+                        }}
                           className="w-full px-4 py-3 flex items-center gap-3 hover:bg-purple-50 transition-colors border-t border-gray-100"
                         >
-                          {getLessonIcon(file.mimeType === 'application/pdf' ? 'pdf' : 'document')}
+                          {getLessonIcon(file.mimeType === 'application/pdf' ? 'pdf' : file.mimeType.startsWith('image/') ? 'image' : 'document')}
                           <span className="text-sm text-gray-700 text-left">
                             <div className="font-medium">{file.originalName}</div>
                             <div className="text-xs text-gray-500">{formatFileSize(file.size)}</div>
@@ -203,7 +213,67 @@ export default function CourseClient({ sections }: CourseClientProps) {
 
           {/* Content Display */}
           <div className="flex-1 p-8">
-            {selectedContent.type === 'pdf' ? (
+            {selectedContent.type === 'image' ? (
+              <div className="h-full flex flex-col">
+                {/* Image Viewer */}
+                <div className="flex-1 bg-gray-50 rounded-lg border border-gray-200 overflow-hidden">
+                  <div className="bg-white border-b border-gray-200 px-4 py-3 flex items-center justify-between">
+                    <div className="flex items-center gap-4">
+                      <span className="text-sm text-gray-600">Imagen</span>
+                      <div className="flex items-center gap-2 text-sm text-gray-500">
+                        <span>Vista previa</span>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <a 
+                        href={selectedContent.url}
+                        download
+                        className="px-4 py-1 text-sm bg-purple-600 hover:bg-purple-700 text-white rounded transition-colors"
+                      >
+                        Descargar Imagen
+                      </a>
+                    </div>
+                  </div>
+                  
+                  {/* Image Content */}
+                  <div className="flex-1 p-8">
+                    <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+                      <div className="p-8">
+                        <img
+                          src={selectedContent.url}
+                          alt={selectedContent.title}
+                          className="w-full h-auto rounded-lg shadow-md"
+                          style={{ maxHeight: '600px', objectFit: 'contain' }}
+                        />
+                      </div>
+                      <div className="bg-gray-50 px-8 py-4 border-t">
+                        <div className="flex items-center justify-between">
+                          <p className="text-sm text-gray-600">
+                            Si la imagen no se visualiza correctamente, 
+                            <a 
+                              href={selectedContent.url} 
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-purple-600 hover:text-purple-700 font-medium ml-1"
+                            >
+                              ábrela en una nueva pestaña
+                            </a>
+                            {' '}o{' '}
+                            <a 
+                              href={selectedContent.url}
+                              download
+                              className="text-purple-600 hover:text-purple-700 font-medium ml-1"
+                            >
+                              descárgala
+                            </a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ) : selectedContent.type === 'pdf' ? (
               <div className="h-full flex flex-col">
                 {/* PDF Viewer */}
                 <div className="flex-1 bg-gray-50 rounded-lg border border-gray-200 overflow-hidden">
