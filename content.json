@@ -1,4 +1,15 @@
 {
-  "sections": [],
-  "publishedAt": null
+  "sections": [
+    {
+      "id": "cmrk1nw990000i84qzlh8hqgc",
+      "title": "Bienvenida",
+      "slug": "bienvenida",
+      "body": "Este es el primer apartado.",
+      "order": 0,
+      "createdAt": "2026-07-14T02:40:51.213Z",
+      "updatedAt": "2026-07-14T02:40:51.213Z",
+      "files": []
+    }
+  ],
+  "publishedAt": "2026-07-14T02:40:55.935Z"
 }
