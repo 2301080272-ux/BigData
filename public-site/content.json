@@ -2,24 +2,23 @@
   "sections": [
     {
       "id": "cmrk2n3bi0000llwqud4ia8ee",
-      "title": "Bienvenida",
-      "slug": "bienvenida",
-      "body": "Este es el primer apartado.",
-      "order": 0,
+      "title": "DashBoard con IA",
+      "slug": "..",
+      "body": "DashBoard con Lovable",
+      "order": 1,
       "createdAt": "2026-07-14T03:08:13.326Z",
-      "updatedAt": "2026-07-14T03:08:13.326Z",
-      "files": [
+      "updatedAt": "2026-07-14T19:21:51.486Z",
+      "files": [],
+      "links": [
         {
-          "id": "cmrk34jai0002ucito06wzpmt",
-          "filename": "1783999307166-baseTL.pbix",
-          "originalName": "baseTL.pbix",
-          "mimeType": "application/octet-stream",
-          "size": 5549316,
+          "id": "cmrl1fz56000369lcaaava2ag",
+          "title": "DashBoard",
+          "url": "https://intuitive-hub-io.lovable.app/",
+          "order": 0,
           "sectionId": "cmrk2n3bi0000llwqud4ia8ee",
-          "createdAt": "2026-07-14T03:21:47.178Z"
+          "createdAt": "2026-07-14T19:22:27.882Z"
         }
-      ],
-      "links": []
+      ]
     },
     {
       "id": "cmrk2z62u0000ucit5cdoea2g",
@@ -43,5 +42,5 @@
       "links": []
     }
   ],
-  "publishedAt": "2026-07-14T19:19:58.992Z"
+  "publishedAt": "2026-07-14T19:22:34.126Z"
 }
