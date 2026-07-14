@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Sitio Público',
+  title: 'BigData-Reyna',
 }
 
 export default function RootLayout({
