@@ -40,7 +40,28 @@
         }
       ],
       "links": []
+    },
+    {
+      "id": "cmrl1hfvz000469lcn0qp7ngx",
+      "title": "Paper Reyna",
+      "slug": "...",
+      "body": "Evaluación experimental del rendimiento del ecosistema Hadoop en entornos Docker y máquinas virtuales para el procesamiento distribuido de datos",
+      "order": 3,
+      "createdAt": "2026-07-14T19:23:36.240Z",
+      "updatedAt": "2026-07-14T19:23:36.240Z",
+      "files": [
+        {
+          "id": "cmrl1htpe000669lc55iwjfpd",
+          "filename": "1784057034139-Art_culo_Reyna.docx.pdf",
+          "originalName": "Artículo Reyna.docx.pdf",
+          "mimeType": "application/pdf",
+          "size": 2861403,
+          "sectionId": "cmrl1hfvz000469lcn0qp7ngx",
+          "createdAt": "2026-07-14T19:23:54.146Z"
+        }
+      ],
+      "links": []
     }
   ],
-  "publishedAt": "2026-07-14T19:22:34.126Z"
+  "publishedAt": "2026-07-14T19:24:01.641Z"
 }
