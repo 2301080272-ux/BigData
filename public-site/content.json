@@ -48,7 +48,7 @@
       "body": "Evaluación experimental del rendimiento del ecosistema Hadoop en entornos Docker y máquinas virtuales para el procesamiento distribuido de datos",
       "order": 3,
       "createdAt": "2026-07-14T19:23:36.240Z",
-      "updatedAt": "2026-07-14T19:23:36.240Z",
+      "updatedAt": "2026-07-14T19:25:06.336Z",
       "files": [
         {
           "id": "cmrl1htpe000669lc55iwjfpd",
@@ -63,5 +63,5 @@
       "links": []
     }
   ],
-  "publishedAt": "2026-07-14T19:24:01.641Z"
+  "publishedAt": "2026-07-14T19:25:34.139Z"
 }
