@@ -399,59 +399,75 @@ export default function CourseClient({ sections }: CourseClientProps) {
                 {selectedContent.section.files.length > 0 && (
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-4">Archivos del Módulo</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-6">
                       {selectedContent.section.files.map((file) => (
-                        <div key={file.id} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
-                          <div className="flex items-center gap-3">
-                            {getLessonIcon(file.mimeType === 'application/pdf' ? 'pdf' : 'document')}
-                            <div className="flex-1">
-                              <p className="font-medium text-gray-900">{file.originalName}</p>
-                              <p className="text-sm text-gray-500">{formatFileSize(file.size)}</p>
+                        <div key={file.id} className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+                          {/* Image Preview */}
+                          {file.mimeType.startsWith('image/') && (
+                            <div className="p-4 bg-gray-50">
+                              <img
+                                src={`/api/uploads/${file.filename}`}
+                                alt={file.originalName}
+                                className="w-full h-auto rounded-lg shadow-sm"
+                                style={{ maxHeight: '300px', objectFit: 'contain' }}
+                              />
                             </div>
-                            <a
-                              href={`/api/uploads/${file.filename}`}
-                              download={file.originalName}
-                              className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-                            >
-                              <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                              </svg>
-                            </a>
+                          )}
+                          
+                          {/* File Info */}
+                          <div className="p-4">
+                            <div className="flex items-center justify-between">
+                              <div className="flex items-center gap-3">
+                                {getLessonIcon(file.mimeType === 'application/pdf' ? 'pdf' : file.mimeType.startsWith('image/') ? 'image' : 'document')}
+                                <div>
+                                  <p className="font-medium text-gray-900">{file.originalName}</p>
+                                  <p className="text-sm text-gray-500">{formatFileSize(file.size)}</p>
+                                </div>
+                              </div>
+                              <a
+                                href={`/api/uploads/${file.filename}`}
+                                download={file.originalName}
+                                className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                              >
+                                <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                </svg>
+                              </a>
+                            </div>
+                            
+                            {/* Links associated with this file */}
+                            {selectedContent.section.links.length > 0 && (
+                              <div className="mt-4 pt-4 border-t border-gray-200">
+                                <p className="text-sm font-medium text-gray-700 mb-2">Enlaces relacionados:</p>
+                                <div className="space-y-2">
+                                  {selectedContent.section.links
+                                    .sort((a, b) => a.order - b.order)
+                                    .map((link) => (
+                                      <a
+                                        key={link.id}
+                                        href={link.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-2 p-2 bg-purple-50 hover:bg-purple-100 rounded-lg transition-colors text-sm"
+                                      >
+                                        <svg className="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                                        </svg>
+                                        <span className="text-purple-900 font-medium">{link.title}</span>
+                                        <svg className="w-3 h-3 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                        </svg>
+                                      </a>
+                                    ))}
+                                </div>
+                              </div>
+                            )}
                           </div>
                         </div>
                       ))}
                     </div>
                   </div>
                 )}
-                
-                {selectedContent.section.links.length > 0 && (
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Enlaces del Módulo</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {selectedContent.section.links.map((link) => (
-                        <a
-                          key={link.id}
-                          href={link.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow block"
-                        >
-                          <div className="flex items-center gap-3">
-                            {getLessonIcon('link')}
-                            <div className="flex-1">
-                              <p className="font-medium text-gray-900">{link.title}</p>
-                              <p className="text-sm text-gray-500 truncate">{link.url}</p>
-                            </div>
-                            <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                            </svg>
-                          </div>
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
             ) : (
               <div className="flex items-center justify-center h-full">
                 <div className="text-center">
