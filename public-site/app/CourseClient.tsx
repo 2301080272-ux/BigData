@@ -146,7 +146,7 @@ export default function CourseClient({ sections }: CourseClientProps) {
                           onClick={() => setSelectedContent({
                             type: file.mimeType === 'application/pdf' ? 'pdf' : 'module',
                             title: file.originalName,
-                            url: `/uploads/${file.filename}`,
+                            url: `/api/uploads/${file.filename}`,
                             section: section
                           })}
                           className="w-full px-4 py-3 flex items-center gap-3 hover:bg-purple-50 transition-colors border-t border-gray-100"
@@ -339,7 +339,7 @@ export default function CourseClient({ sections }: CourseClientProps) {
                               <p className="text-sm text-gray-500">{formatFileSize(file.size)}</p>
                             </div>
                             <a
-                              href={`/uploads/${file.filename}`}
+                              href={`/api/uploads/${file.filename}`}
                               download={file.originalName}
                               className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
                             >
