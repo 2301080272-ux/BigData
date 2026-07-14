@@ -10,6 +10,14 @@ type FileItem = {
   sectionId: string
 }
 
+type Link = {
+  id: string
+  title: string
+  url: string
+  order: number
+  sectionId: string
+}
+
 type Section = {
   id: string
   title: string
@@ -17,6 +25,7 @@ type Section = {
   body: string
   order: number
   files: FileItem[]
+  links: Link[]
 }
 
 type Content = {
@@ -47,22 +56,62 @@ export default async function HomePage() {
               <h2 className="text-xl font-bold mb-2">{section.title}</h2>
               <p className="whitespace-pre-wrap">{section.body}</p>
 
-              {section.files.length > 0 && (
+              {section.links && section.links.length > 0 && (
                 <div className="mt-4">
-                  <h3 className="font-semibold text-sm mb-2">Archivos:</h3>
+                  <h3 className="font-semibold text-sm mb-2">Enlaces:</h3>
                   <ul className="space-y-2">
-                    {section.files.map((file) => (
-                      <li key={file.id}>
+                    {section.links.map((link) => (
+                      <li key={link.id}>
                         <a
-                          href={`/uploads/${file.filename}`}
-                          download={file.originalName}
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="text-blue-600 hover:underline"
                         >
-                          {file.originalName}
+                          {link.title}
                         </a>
-                        <span className="text-sm text-gray-500 ml-2">
-                          ({(file.size / 1024).toFixed(1)} KB)
-                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {section.files && section.files.length > 0 && (
+                <div className="mt-4">
+                  <h3 className="font-semibold text-sm mb-2">Archivos:</h3>
+                  <ul className="space-y-4">
+                    {section.files.map((file) => (
+                      <li key={file.id}>
+                        <div className="flex items-center gap-2">
+                          <a
+                            href={`/uploads/${file.filename}`}
+                            download={file.originalName}
+                            className="text-blue-600 hover:underline"
+                          >
+                            {file.originalName}
+                          </a>
+                          <span className="text-sm text-gray-500">
+                            ({(file.size / 1024).toFixed(1)} KB)
+                          </span>
+                        </div>
+                        {file.mimeType === 'application/pdf' && (
+                          <object
+                            data={`/uploads/${file.filename}`}
+                            type="application/pdf"
+                            className="w-full h-64 mt-2 border rounded"
+                          >
+                            <p className="text-sm text-gray-500">
+                              Tu navegador no puede mostrar PDFs.{' '}
+                              <a
+                                href={`/uploads/${file.filename}`}
+                                download={file.originalName}
+                                className="text-blue-600 hover:underline"
+                              >
+                                Descargar PDF
+                              </a>
+                            </p>
+                          </object>
+                        )}
                       </li>
                     ))}
                   </ul>
