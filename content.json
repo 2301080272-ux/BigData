@@ -8,7 +8,17 @@
       "order": 0,
       "createdAt": "2026-07-14T03:08:13.326Z",
       "updatedAt": "2026-07-14T03:08:13.326Z",
-      "files": [],
+      "files": [
+        {
+          "id": "cmrk34jai0002ucito06wzpmt",
+          "filename": "1783999307166-baseTL.pbix",
+          "originalName": "baseTL.pbix",
+          "mimeType": "application/octet-stream",
+          "size": 5549316,
+          "sectionId": "cmrk2n3bi0000llwqud4ia8ee",
+          "createdAt": "2026-07-14T03:21:47.178Z"
+        }
+      ],
       "links": []
     },
     {
@@ -23,5 +33,5 @@
       "links": []
     }
   ],
-  "publishedAt": "2026-07-14T03:18:11.611Z"
+  "publishedAt": "2026-07-14T03:21:55.752Z"
 }
