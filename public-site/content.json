@@ -23,12 +23,12 @@
     },
     {
       "id": "cmrk2z62u0000ucit5cdoea2g",
-      "title": "holaaaa",
-      "slug": "uuu",
-      "body": "ugu",
+      "title": "DashBoard Reyna",
+      "slug": ".",
+      "body": "Implementación Praxis ETL en Power BI\nReyna",
       "order": 2,
       "createdAt": "2026-07-14T03:17:36.774Z",
-      "updatedAt": "2026-07-14T04:20:17.681Z",
+      "updatedAt": "2026-07-14T19:19:53.118Z",
       "files": [
         {
           "id": "cmrl13i4s000169lcjsuf3y47",
@@ -43,5 +43,5 @@
       "links": []
     }
   ],
-  "publishedAt": "2026-07-14T19:12:54.462Z"
+  "publishedAt": "2026-07-14T19:19:58.992Z"
 }
