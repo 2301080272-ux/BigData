@@ -61,7 +61,28 @@
         }
       ],
       "links": []
+    },
+    {
+      "id": "cmrl2p3he000769lcxbhx9gie",
+      "title": "Logros Curso PowerBI",
+      "slug": ".....",
+      "body": "Cursos en PowerBI",
+      "order": 4,
+      "createdAt": "2026-07-14T19:57:33.026Z",
+      "updatedAt": "2026-07-14T19:57:33.026Z",
+      "files": [
+        {
+          "id": "cmrl2pslg000969lcvmwoujum",
+          "filename": "1784059085569-WhatsApp_Image_2026-07-07_at_2.44.13_PM.jpeg",
+          "originalName": "WhatsApp Image 2026-07-07 at 2.44.13 PM.jpeg",
+          "mimeType": "image/jpeg",
+          "size": 100856,
+          "sectionId": "cmrl2p3he000769lcxbhx9gie",
+          "createdAt": "2026-07-14T19:58:05.573Z"
+        }
+      ],
+      "links": []
     }
   ],
-  "publishedAt": "2026-07-14T19:25:34.139Z"
+  "publishedAt": "2026-07-14T19:58:13.756Z"
 }
