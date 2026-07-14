@@ -90,8 +90,17 @@
           "createdAt": "2026-07-14T20:05:33.204Z"
         }
       ],
-      "links": []
+      "links": [
+        {
+          "id": "cmrl36szg000d69lc0xszcilg",
+          "title": "Logro 1",
+          "url": "https://learn.microsoft.com/api/achievements/share/es-es/AndreaReynaSaravia-0290/H2M74WN8?sharingId=369264F5F69088C1",
+          "order": 0,
+          "sectionId": "cmrl2p3he000769lcxbhx9gie",
+          "createdAt": "2026-07-14T20:11:19.228Z"
+        }
+      ]
     }
   ],
-  "publishedAt": "2026-07-14T20:05:37.920Z"
+  "publishedAt": "2026-07-14T20:11:35.075Z"
 }
