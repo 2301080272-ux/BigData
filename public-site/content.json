@@ -1,0 +1,37 @@
+{
+  "sections": [
+    {
+      "id": "cmrk2n3bi0000llwqud4ia8ee",
+      "title": "Bienvenida",
+      "slug": "bienvenida",
+      "body": "Este es el primer apartado.",
+      "order": 0,
+      "createdAt": "2026-07-14T03:08:13.326Z",
+      "updatedAt": "2026-07-14T03:08:13.326Z",
+      "files": [
+        {
+          "id": "cmrk34jai0002ucito06wzpmt",
+          "filename": "1783999307166-baseTL.pbix",
+          "originalName": "baseTL.pbix",
+          "mimeType": "application/octet-stream",
+          "size": 5549316,
+          "sectionId": "cmrk2n3bi0000llwqud4ia8ee",
+          "createdAt": "2026-07-14T03:21:47.178Z"
+        }
+      ],
+      "links": []
+    },
+    {
+      "id": "cmrk2z62u0000ucit5cdoea2g",
+      "title": "holaaaa",
+      "slug": "uuu",
+      "body": "ugu",
+      "order": 2,
+      "createdAt": "2026-07-14T03:17:36.774Z",
+      "updatedAt": "2026-07-14T03:17:36.774Z",
+      "files": [],
+      "links": []
+    }
+  ],
+  "publishedAt": "2026-07-14T03:21:55.752Z"
+}

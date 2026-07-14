@@ -1,0 +1,41 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Section {
+  id        String   @id @default(cuid())
+  title     String
+  slug      String   @unique
+  body      String   @default("")
+  order     Int      @default(0)
+  files     File[]
+  links     Link[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model File {
+  id          String   @id @default(cuid())
+  filename    String
+  originalName String
+  mimeType    String
+  size        Int
+  sectionId   String
+  section     Section  @relation(fields: [sectionId], references: [id], onDelete: Cascade)
+  createdAt   DateTime @default(now())
+}
+
+model Link {
+  id        String   @id @default(cuid())
+  title     String
+  url       String
+  order     Int      @default(0)
+  sectionId String
+  section   Section  @relation(fields: [sectionId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+}
