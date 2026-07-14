@@ -225,9 +225,6 @@ export default function CourseClient({ sections }: CourseClientProps) {
                       </div>
                     </div>
                     <div className="flex items-center gap-2">
-                      <button className="px-3 py-1 text-sm bg-gray-100 hover:bg-gray-200 rounded transition-colors">
-                        Lección Anterior
-                      </button>
                       <a 
                         href={selectedContent.url}
                         download
@@ -235,40 +232,62 @@ export default function CourseClient({ sections }: CourseClientProps) {
                       >
                         Descargar PDF
                       </a>
-                      <button className="px-3 py-1 text-sm bg-gray-100 hover:bg-gray-200 rounded transition-colors">
-                        Siguiente Lección
-                      </button>
                     </div>
                   </div>
                   
                   {/* PDF Content */}
                   <div className="flex-1 p-8">
-                    <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-12">
-                      <object
-                        data={selectedContent.url}
-                        type="application/pdf"
-                        className="w-full h-96"
-                      >
-                        <div className="text-center py-12">
-                          <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                            </svg>
+                    <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+                      <div className="p-8">
+                        <iframe
+                          src={selectedContent.url}
+                          className="w-full h-96 border-0 rounded-lg"
+                          title="PDF Viewer"
+                        >
+                          <div className="text-center py-12">
+                            <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                              <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                              </svg>
+                            </div>
+                            <h3 className="text-lg font-semibold text-gray-900 mb-2">Visor de PDF</h3>
+                            <p className="text-gray-600 mb-4">Tu navegador no puede mostrar este PDF.</p>
+                            <a 
+                              href={selectedContent.url}
+                              download
+                              className="inline-flex items-center gap-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors"
+                            >
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                              </svg>
+                              Descargar PDF
+                            </a>
                           </div>
-                          <h3 className="text-lg font-semibold text-gray-900 mb-2">Visor de PDF</h3>
-                          <p className="text-gray-600 mb-4">Tu navegador no puede mostrar este PDF.</p>
-                          <a 
-                            href={selectedContent.url}
-                            download
-                            className="inline-flex items-center gap-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors"
-                          >
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                            </svg>
-                            Descargar PDF
-                          </a>
+                        </iframe>
+                      </div>
+                      <div className="bg-gray-50 px-8 py-4 border-t">
+                        <div className="flex items-center justify-between">
+                          <p className="text-sm text-gray-600">
+                            Si el PDF no se visualiza correctamente, 
+                            <a 
+                              href={selectedContent.url} 
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-purple-600 hover:text-purple-700 font-medium ml-1"
+                            >
+                              abre en una nueva pestaña
+                            </a>
+                            {' '}o{' '}
+                            <a 
+                              href={selectedContent.url}
+                              download
+                              className="text-purple-600 hover:text-purple-700 font-medium ml-1"
+                            >
+                              descárgalo
+                            </a>
+                          </p>
                         </div>
-                      </object>
+                      </div>
                     </div>
                   </div>
                 </div>

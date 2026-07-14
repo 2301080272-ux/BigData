@@ -2,5 +2,10 @@
   "buildCommand": "cd public-site && npm run build",
   "outputDirectory": "public-site/.next",
   "installCommand": "cd public-site && npm install",
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "functions": {
+    "public-site/app/api/**/*.ts": {
+      "runtime": "nodejs18.x"
+    }
+  }
 }
