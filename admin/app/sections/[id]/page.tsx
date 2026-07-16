@@ -5,6 +5,7 @@ import { useParams, useRouter } from 'next/navigation'
 import SectionForm from '@/components/SectionForm'
 import Button from '@/components/Button'
 import Toast, { ToastType } from '@/components/Toast'
+import ModuleContentManager from '@/components/ModuleContentManager'
 
 type FileItem = {
   id: string
@@ -145,7 +146,7 @@ export default function EditSectionPage() {
         loading={saving}
       />
 
-      <section className="bg-white rounded-lg shadow p-6 space-y-4">
+      <section className="hidden bg-white rounded-lg shadow p-6 space-y-4">
         <div>
           <h2 className="text-xl font-bold">Archivos</h2>
           <p className="text-sm text-gray-500">
@@ -198,7 +199,7 @@ export default function EditSectionPage() {
         </form>
       </section>
 
-      <section className="bg-white rounded-lg shadow p-6 space-y-4">
+      <section className="hidden bg-white rounded-lg shadow p-6 space-y-4">
         <div>
           <h2 className="text-xl font-bold">Enlaces</h2>
           <p className="text-sm text-gray-500">
@@ -270,6 +271,18 @@ export default function EditSectionPage() {
           </div>
         </form>
       </section>
+
+      <ModuleContentManager
+        section={section}
+        uploading={uploading}
+        linkSaving={linkSaving}
+        linkForm={linkForm}
+        onUpload={handleUpload}
+        onAddLink={handleAddLink}
+        onDeleteFile={deleteFile}
+        onDeleteLink={deleteLink}
+        onLinkFormChange={setLinkForm}
+      />
 
       {toast && (
         <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />

@@ -1,6 +1,6 @@
 import fs from 'fs/promises'
 import path from 'path'
-import CourseClient from './CourseClient'
+import PortfolioExperience from './PortfolioExperience'
 
 type FileItem = {
   id: string
@@ -39,5 +39,5 @@ export default async function HomePage() {
   const raw = await fs.readFile(contentPath, 'utf-8')
   const content: Content = JSON.parse(raw)
 
-  return <CourseClient sections={content.sections} />
+  return <PortfolioExperience sections={content.sections} />
 }
