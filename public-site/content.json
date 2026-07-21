@@ -6,6 +6,7 @@
       "slug": "..",
       "body": "DashBoard con Lovable",
       "order": 1,
+      "isAchievement": false,
       "createdAt": "2026-07-14T03:08:13.326Z",
       "updatedAt": "2026-07-14T19:21:51.486Z",
       "files": [],
@@ -26,6 +27,7 @@
       "slug": ".",
       "body": "Implementación Praxis ETL en Power BI\nReyna",
       "order": 2,
+      "isAchievement": false,
       "createdAt": "2026-07-14T03:17:36.774Z",
       "updatedAt": "2026-07-14T19:19:53.118Z",
       "files": [
@@ -47,6 +49,7 @@
       "slug": "...",
       "body": "Evaluación experimental del rendimiento del ecosistema Hadoop en entornos Docker y máquinas virtuales para el procesamiento distribuido de datos",
       "order": 3,
+      "isAchievement": false,
       "createdAt": "2026-07-14T19:23:36.240Z",
       "updatedAt": "2026-07-14T19:25:06.336Z",
       "files": [
@@ -68,8 +71,9 @@
       "slug": ".....",
       "body": "- Introducción\n- Usar Power BI\n- Bloques de creación de Power BI\n- Paseo por el servicio Power BI y uso",
       "order": 4,
+      "isAchievement": true,
       "createdAt": "2026-07-14T19:57:33.026Z",
-      "updatedAt": "2026-07-21T12:44:51.436Z",
+      "updatedAt": "2026-07-21T13:24:29.196Z",
       "files": [
         {
           "id": "cmrunbobk0001414ihmcwzt3m",
@@ -93,5 +97,5 @@
       ]
     }
   ],
-  "publishedAt": "2026-07-21T12:46:19.875Z"
+  "publishedAt": "2026-07-21T13:24:39.492Z"
 }
