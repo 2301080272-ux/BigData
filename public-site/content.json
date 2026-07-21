@@ -250,7 +250,100 @@
           "createdAt": "2026-07-21T13:46:50.347Z"
         }
       ]
+    },
+    {
+      "id": "cmruzyhr0000260utdgs2qutt",
+      "title": "Optimizar un modelo para mejorar el rendimiento en Power BI",
+      "slug": "............",
+      "body": "- Introducción a la optimización del rendimiento\n- Describir técnicas de optimización de modelos semánticos\n- Revisión del rendimiento de medidas, relaciones y objetos visuales\n- Uso de variables para mejorar el rendimiento y solucionar problemas\n- Reducir la cardinalidad\n- Optimizar modelos de DirectQuery con el almacenamiento en el nivel de tabla.\n- Crear y administrar agregaciones",
+      "order": 12,
+      "isAchievement": true,
+      "createdAt": "2026-07-21T18:38:34.333Z",
+      "updatedAt": "2026-07-21T18:59:32.059Z",
+      "files": [
+        {
+          "id": "cmrv0pcnl0001tmoc8jc63tny",
+          "filename": "1784660367430-Logro7.png",
+          "originalName": "Logro7.png",
+          "mimeType": "image/png",
+          "size": 274949,
+          "sectionId": "cmruzyhr0000260utdgs2qutt",
+          "createdAt": "2026-07-21T18:59:27.441Z"
+        }
+      ],
+      "links": [
+        {
+          "id": "cmrv0pdsw0003tmocqgucs462",
+          "title": "Séptimo Logro ",
+          "url": "https://learn.microsoft.com/api/achievements/share/es-es/AndreaReynaSaravia-0290/VSGJG6JM?sharingId=369264F5F69088C1",
+          "order": 0,
+          "sectionId": "cmruzyhr0000260utdgs2qutt",
+          "createdAt": "2026-07-21T18:59:28.928Z"
+        }
+      ]
+    },
+    {
+      "id": "cmrv0qll90004tmoc657qathb",
+      "title": "Usar las funciones de inteligencia de tiempo de DAX en modelos semánticos",
+      "slug": ".............",
+      "body": "- Usar las funciones de inteligencia de tiempo de DAX\n- Cálculos de inteligencia de tiempo adicionales",
+      "order": 13,
+      "isAchievement": true,
+      "createdAt": "2026-07-21T19:00:25.677Z",
+      "updatedAt": "2026-07-21T19:00:54.125Z",
+      "files": [
+        {
+          "id": "cmrv0r4ih0006tmocp5wys28r",
+          "filename": "1784660450196-Logro8.png",
+          "originalName": "Logro8.png",
+          "mimeType": "image/png",
+          "size": 279230,
+          "sectionId": "cmrv0qll90004tmoc657qathb",
+          "createdAt": "2026-07-21T19:00:50.201Z"
+        }
+      ],
+      "links": [
+        {
+          "id": "cmrv0r5zm0008tmocqcusgavt",
+          "title": "Octavo Logro",
+          "url": "https://learn.microsoft.com/api/achievements/share/es-es/AndreaReynaSaravia-0290/WMP2PVXN?sharingId=369264F5F69088C1",
+          "order": 0,
+          "sectionId": "cmrv0qll90004tmoc657qathb",
+          "createdAt": "2026-07-21T19:00:52.114Z"
+        }
+      ]
+    },
+    {
+      "id": "cmrv0sdxq0009tmoc0qxc4oex",
+      "title": "Modificar el contexto del filtro DAX en los modelos semánticos",
+      "slug": "..............",
+      "body": "- Cómo funciona el contexto de filtro\n- Modificar el contexto de filtro\n- Uso de funciones modificadoras de filtro\n- Examinar el contexto de filtro\n- Realizar la transición de contexto",
+      "order": 14,
+      "isAchievement": true,
+      "createdAt": "2026-07-21T19:01:49.070Z",
+      "updatedAt": "2026-07-21T19:02:31.391Z",
+      "files": [
+        {
+          "id": "cmrv0t7a1000btmocv5tod19y",
+          "filename": "1784660547092-Logro9.png",
+          "originalName": "Logro9.png",
+          "mimeType": "image/png",
+          "size": 277354,
+          "sectionId": "cmrv0sdxq0009tmoc0qxc4oex",
+          "createdAt": "2026-07-21T19:02:27.098Z"
+        }
+      ],
+      "links": [
+        {
+          "id": "cmrv0t8s8000dtmocdh5vfu9t",
+          "title": "Noveno Logro",
+          "url": "https://learn.microsoft.com/api/achievements/share/es-es/AndreaReynaSaravia-0290/U7VRVXE3?sharingId=369264F5F69088C1",
+          "order": 0,
+          "sectionId": "cmrv0sdxq0009tmoc0qxc4oex",
+          "createdAt": "2026-07-21T19:02:29.049Z"
+        }
+      ]
     }
   ],
-  "publishedAt": "2026-07-21T13:47:20.524Z"
+  "publishedAt": "2026-07-21T19:02:40.464Z"
 }
