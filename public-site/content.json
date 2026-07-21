@@ -95,7 +95,162 @@
           "createdAt": "2026-07-21T12:44:56.242Z"
         }
       ]
+    },
+    {
+      "id": "cmrup1xvh0003u6t3uz7vn4lv",
+      "title": "Obtener datos en Power BI",
+      "slug": "......",
+      "body": "- Obtener datos de archivos\n- Obtener datos de orígenes de datos relacionales\n- Crear informes dinámicos con parámetros\n- Obtener datos de una base de datos NoSQL\n- Obtener datos de servicios en línea\n- Seleccionar un modo de almacenamiento\n- Obtener datos de Azure Analysis Services\n- Solucionar problemas de rendimiento\n- Resolver errores de importación de datos",
+      "order": 6,
+      "isAchievement": true,
+      "createdAt": "2026-07-21T13:33:19.422Z",
+      "updatedAt": "2026-07-21T13:35:14.562Z",
+      "files": [
+        {
+          "id": "cmrup5e2j0005u6t3v5ehl5qq",
+          "filename": "1784640960374-Logro_2.png",
+          "originalName": "Logro_2.png",
+          "mimeType": "image/png",
+          "size": 276251,
+          "sectionId": "cmrup1xvh0003u6t3uz7vn4lv",
+          "createdAt": "2026-07-21T13:36:00.380Z"
+        }
+      ],
+      "links": [
+        {
+          "id": "cmrup5fpi0007u6t3f84tsc9r",
+          "title": "Segundo Logro",
+          "url": "https://learn.microsoft.com/api/achievements/share/es-es/AndreaReynaSaravia-0290/H2Q7ZR38?sharingId=369264F5F69088C1",
+          "order": 0,
+          "sectionId": "cmrup1xvh0003u6t3uz7vn4lv",
+          "createdAt": "2026-07-21T13:36:02.502Z"
+        }
+      ]
+    },
+    {
+      "id": "cmrup7gjr0008u6t3xm19an4u",
+      "title": "Limpiar, transformar y cargar datos en Power BI",
+      "slug": ".......",
+      "body": "- Dar formato a los datos iniciales\n- Simplificación de la estructura de datos\n- Evaluación y cambio de tipos de datos de columna\n- Combinación de varias tablas en una sola\n- Datos de perfil en Power BI\n- Uso del Editor avanzado para modificar el código M",
+      "order": 7,
+      "isAchievement": true,
+      "createdAt": "2026-07-21T13:37:36.903Z",
+      "updatedAt": "2026-07-21T13:37:36.903Z",
+      "files": [
+        {
+          "id": "cmrup9axw000au6t3mpgeuw82",
+          "filename": "1784641142941-Logro3.png",
+          "originalName": "Logro3.png",
+          "mimeType": "image/png",
+          "size": 277749,
+          "sectionId": "cmrup7gjr0008u6t3xm19an4u",
+          "createdAt": "2026-07-21T13:39:02.948Z"
+        }
+      ],
+      "links": [
+        {
+          "id": "cmrup9bw8000cu6t3yu0k1wcp",
+          "title": "Tercer Logro ",
+          "url": "https://learn.microsoft.com/api/achievements/share/es-es/AndreaReynaSaravia-0290/U7VR76A3?sharingId=369264F5F69088C1",
+          "order": 0,
+          "sectionId": "cmrup7gjr0008u6t3xm19an4u",
+          "createdAt": "2026-07-21T13:39:04.184Z"
+        }
+      ]
+    },
+    {
+      "id": "cmrupaw81000du6t3uhod4jcy",
+      "title": "Elección de un marco de modelo de Power BI",
+      "slug": "........",
+      "body": "- Describir los aspectos básicos del modelo de Power BI.\n- Determinación de cuándo desarrollar un modelo de importación\n- Determinar cuándo desarrollar un modelo de DirectQuery.\n- Determinación de cuándo desarrollar un modelo compuesto\n- Elección de un marco de modelo",
+      "order": 8,
+      "isAchievement": true,
+      "createdAt": "2026-07-21T13:40:17.185Z",
+      "updatedAt": "2026-07-21T13:40:17.185Z",
+      "files": [
+        {
+          "id": "cmrupd64i000fu6t3ozbg0bwq",
+          "filename": "1784641323326-Logro4.png",
+          "originalName": "Logro4.png",
+          "mimeType": "image/png",
+          "size": 277986,
+          "sectionId": "cmrupaw81000du6t3uhod4jcy",
+          "createdAt": "2026-07-21T13:42:03.330Z"
+        }
+      ],
+      "links": [
+        {
+          "id": "cmrupd7pe000hu6t3twoz6eaq",
+          "title": "Cuarto Logro",
+          "url": "https://learn.microsoft.com/api/achievements/share/es-es/AndreaReynaSaravia-0290/CRZXA8A9?sharingId=369264F5F69088C1",
+          "order": 0,
+          "sectionId": "cmrupaw81000du6t3uhod4jcy",
+          "createdAt": "2026-07-21T13:42:05.378Z"
+        }
+      ]
+    },
+    {
+      "id": "cmrupf0xt000iu6t31gaycvny",
+      "title": "Crear informes interactivos con Copilot para Power BI",
+      "slug": ".........",
+      "body": "- Preparar sus datos para usarlos con Copilot para Power BI\n- Usar Copilot para Power BI para modelar los datos\n- Crear informes con Copilot para Power BI\n- Crea resúmenes con Copilot para Power BI",
+      "order": 9,
+      "isAchievement": true,
+      "createdAt": "2026-07-21T13:43:29.921Z",
+      "updatedAt": "2026-07-21T13:43:29.921Z",
+      "files": [
+        {
+          "id": "cmrupg4j8000ku6t3gvs0yxuj",
+          "filename": "1784641461230-Logro5.png",
+          "originalName": "Logro5.png",
+          "mimeType": "image/png",
+          "size": 278010,
+          "sectionId": "cmrupf0xt000iu6t31gaycvny",
+          "createdAt": "2026-07-21T13:44:21.236Z"
+        }
+      ],
+      "links": [
+        {
+          "id": "cmrupg63h000mu6t3noo4xxye",
+          "title": "Quinto Logro",
+          "url": "https://learn.microsoft.com/api/achievements/share/es-es/AndreaReynaSaravia-0290/EG956XCP?sharingId=369264F5F69088C1",
+          "order": 0,
+          "sectionId": "cmrupf0xt000iu6t31gaycvny",
+          "createdAt": "2026-07-21T13:44:23.261Z"
+        }
+      ]
+    },
+    {
+      "id": "cmrupi1ms000nu6t3s5rqstwi",
+      "title": "Crear cálculos visuales en Power BI Desktop",
+      "slug": "...........",
+      "body": "- Comprender los cálculos visuales\n- Crear cálculos visuales\n- Usar parámetros en cálculos visuales",
+      "order": 10,
+      "isAchievement": true,
+      "createdAt": "2026-07-21T13:45:50.788Z",
+      "updatedAt": "2026-07-21T13:45:50.788Z",
+      "files": [
+        {
+          "id": "cmrupjao5000pu6t3cu5i848y",
+          "filename": "1784641609153-Logro6.png",
+          "originalName": "Logro6.png",
+          "mimeType": "image/png",
+          "size": 277052,
+          "sectionId": "cmrupi1ms000nu6t3s5rqstwi",
+          "createdAt": "2026-07-21T13:46:49.157Z"
+        }
+      ],
+      "links": [
+        {
+          "id": "cmrupjbl7000ru6t32bens7vv",
+          "title": "Sexto Logro",
+          "url": "https://learn.microsoft.com/api/achievements/share/es-es/AndreaReynaSaravia-0290/U7VR2HE3?sharingId=369264F5F69088C1",
+          "order": 0,
+          "sectionId": "cmrupi1ms000nu6t3s5rqstwi",
+          "createdAt": "2026-07-21T13:46:50.347Z"
+        }
+      ]
     }
   ],
-  "publishedAt": "2026-07-21T13:24:39.492Z"
+  "publishedAt": "2026-07-21T13:47:20.524Z"
 }
