@@ -70,24 +70,25 @@ export default function ContentPreviewPanel({ section, onClose }: { section: Sec
           </div>
         </aside>
         <section className="min-h-0 bg-slate-100 p-3 dark:bg-slate-900 sm:p-5">
-          {selected ? <Preview resource={selected} /> : <div className="grid h-full min-h-80 place-items-center rounded-2xl border border-dashed border-slate-300 bg-white text-center text-slate-500 dark:border-slate-700 dark:bg-slate-950"><div><ResourceIcon type="file" /><p className="mt-3 font-medium">No hay evidencia para mostrar</p></div></div>}
+          {selected ? <Preview resource={selected} section={section} /> : <div className="grid h-full min-h-80 place-items-center rounded-2xl border border-dashed border-slate-300 bg-white text-center text-slate-500 dark:border-slate-700 dark:bg-slate-950"><div><ResourceIcon type="file" /><p className="mt-3 font-medium">No hay evidencia para mostrar</p></div></div>}
         </section>
       </div>
     </div>
   </div>
 }
 
-function Preview({ resource }: { resource: Resource }) {
+function Preview({ resource, section }: { resource: Resource; section: Section }) {
   const isImage = resource.kind === 'file' && resource.mimeType.startsWith('image/')
   const isPdf = resource.kind === 'file' && resource.mimeType === 'application/pdf'
   const title = resource.kind === 'link' ? 'Vista previa del enlace' : isImage ? 'Vista previa de imagen' : isPdf ? 'Vista previa de PDF' : 'Archivo descargable'
+  const relatedLink = section.links[0]
 
   return <div className="flex h-full min-h-[28rem] flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-950">
     <div className="flex items-center justify-between gap-4 border-b border-slate-200 px-4 py-3 dark:border-slate-800"><div className="min-w-0"><p className="text-xs font-bold uppercase tracking-wider text-cyan-700 dark:text-cyan-400">{title}</p><p className="truncate text-sm font-semibold">{resource.title}</p></div><a href={resource.url} target="_blank" rel="noreferrer" className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-slate-900 px-3 py-2 text-xs font-semibold text-white transition hover:bg-cyan-700 dark:bg-cyan-600"><ResourceIcon type={resource.kind === 'file' ? 'download' : 'external'} />{resource.kind === 'file' ? 'Abrir / descargar' : 'Abrir enlace'}</a></div>
     <div className="min-h-0 flex-1 bg-slate-100 dark:bg-slate-900">
-      {isImage && <div className="flex h-full min-h-[24rem] items-center justify-center p-5"><img src={resource.url} alt={resource.title} className="max-h-[65vh] max-w-full rounded-xl object-contain shadow-lg" /></div>}
+      {isImage && <div className="flex h-full min-h-[24rem] flex-col items-center justify-center p-5"><img src={resource.url} alt={resource.title} className="max-h-[65vh] max-w-full rounded-xl object-contain shadow-lg" />{relatedLink && <div className="mt-4 flex items-center gap-2 text-sm text-cyan-700"><a href={relatedLink.url} target="_blank" rel="noreferrer" className="font-medium hover:underline">{relatedLink.title}</a><span className="text-slate-500">→</span></div>}</div>}
       {isPdf && <iframe src={resource.url} title={resource.title} className="h-full min-h-[31rem] w-full bg-white" />}
-      {resource.kind === 'link' && <div className="relative h-full min-h-[31rem]"><iframe src={resource.url} title={resource.title} className="h-full w-full bg-white" sandbox="allow-scripts allow-forms allow-popups allow-same-origin" /><div className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-slate-950/85 px-4 py-2 text-center text-xs text-white shadow-lg">Si el sitio bloquea la vista previa, usa “Abrir enlace”.</div></div>}
+      {resource.kind === 'link' && <div className="relative h-full min-h-[31rem]"><iframe src={resource.url} title={resource.title} className="h-full w-full bg-white" sandbox="allow-scripts allow-forms allow-popups allow-same-origin" /><div className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-slate-950/85 px-4 py-2 text-center text-xs text-white shadow-lg">Si el sitio bloquea la vista previa, usa "Abrir enlace".</div></div>}
       {resource.kind === 'file' && !isImage && !isPdf && <div className="grid h-full min-h-[24rem] place-items-center p-6 text-center"><div className="max-w-sm"><span className="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-cyan-50 text-cyan-700 dark:bg-cyan-400/10 dark:text-cyan-300"><ResourceIcon type="file" /></span><h3 className="mt-5 text-lg font-bold">Vista previa no disponible</h3><p className="mt-2 text-sm leading-6 text-slate-500">Este formato necesita una aplicación compatible para abrirse. Puedes descargarlo desde el botón superior.</p></div></div>}
     </div>
   </div>
