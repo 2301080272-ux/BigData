@@ -19,6 +19,7 @@ type Link = {
 type Section = {
   title: string
   body: string
+  isAchievement?: boolean
   files: FileItem[]
   links: Link[]
 }

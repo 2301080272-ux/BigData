@@ -28,6 +28,7 @@ type Section = {
   slug: string
   body: string
   order: number
+  isAchievement?: boolean
   files: FileItem[]
   links: Link[]
 }

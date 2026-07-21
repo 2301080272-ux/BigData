@@ -11,12 +11,13 @@ type Section = {
   id: string
   title: string
   body: string
+  isAchievement?: boolean
   files: FileItem[]
   links: { id: string; title: string; url: string }[]
 }
 
 export default function PowerBiAchievements({ sections, onOpen }: { sections: Section[]; onOpen: (section: Section) => void }) {
-  const courses = sections.filter((section) => /logros?\s+curso[s]?\s+power\s*bi/i.test(section.title))
+  const courses = sections.filter((section) => section.isAchievement === true)
   const displayCourses = courses
   const certificate = displayCourses.flatMap((section) => section.files).find((file) => file.mimeType.startsWith('image/'))
 

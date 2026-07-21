@@ -28,6 +28,7 @@ type Section = {
   slug: string
   body: string
   order: number
+  isAchievement?: boolean
   files: FileItem[]
   links: Link[]
 }
@@ -55,7 +56,7 @@ export default function EditSectionPage() {
     fetchSection().finally(() => setLoading(false))
   }, [id])
 
-  async function handleSubmit(data: { title: string; slug: string; body: string; order: number }) {
+  async function handleSubmit(data: { title: string; slug: string; body: string; order: number; isAchievement: boolean }) {
     setSaving(true)
     const res = await fetch(`/api/sections/${id}`, {
       method: 'PUT',

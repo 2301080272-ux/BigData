@@ -6,10 +6,10 @@ export async function PUT(
   { params }: { params: { id: string } }
 ) {
   const json = await req.json()
-  const { title, slug, body, order } = json
+  const { title, slug, body, order, isAchievement } = json
   const section = await prisma.section.update({
     where: { id: params.id },
-    data: { title, slug, body, order: Number(order) },
+    data: { title, slug, body, order: Number(order), isAchievement },
     include: { files: true, links: { orderBy: { order: 'asc' } } },
   })
   return NextResponse.json(section)

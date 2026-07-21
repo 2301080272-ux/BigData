@@ -9,11 +9,12 @@ type Section = {
   slug: string
   body: string
   order: number
+  isAchievement?: boolean
 }
 
 type Props = {
   initial?: Partial<Section>
-  onSubmit: (data: { title: string; slug: string; body: string; order: number }) => void
+  onSubmit: (data: { title: string; slug: string; body: string; order: number; isAchievement: boolean }) => void
   onCancel?: () => void
   loading?: boolean
 }
@@ -23,10 +24,11 @@ export default function SectionForm({ initial, onSubmit, onCancel, loading }: Pr
   const [slug, setSlug] = useState(initial?.slug ?? '')
   const [body, setBody] = useState(initial?.body ?? '')
   const [order, setOrder] = useState(String(initial?.order ?? 0))
+  const [isAchievement, setIsAchievement] = useState(initial?.isAchievement ?? false)
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    onSubmit({ title, slug, body, order: Number(order) })
+    onSubmit({ title, slug, body, order: Number(order), isAchievement })
   }
 
   return (
@@ -70,6 +72,18 @@ export default function SectionForm({ initial, onSubmit, onCancel, loading }: Pr
           onChange={(e) => setBody(e.target.value)}
           placeholder="Escribe el contenido del apartado..."
         />
+      </div>
+      <div className="flex items-center gap-2">
+        <input
+          type="checkbox"
+          id="isAchievement"
+          checked={isAchievement}
+          onChange={(e) => setIsAchievement(e.target.checked)}
+          className="w-4 h-4 rounded border-gray-300"
+        />
+        <label htmlFor="isAchievement" className="text-sm font-medium">
+          Mostrar en sección de Logros
+        </label>
       </div>
       <div className="flex gap-2 pt-2">
         <Button type="submit" disabled={loading}>
