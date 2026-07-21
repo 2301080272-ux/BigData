@@ -21,7 +21,7 @@ export default function RootLayout({
           {/* Portfolio Header */}
           <header
             className="relative hidden text-white shadow-lg bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: 'url(/uploads/bigdata-bg.jpg)' }}
+            style={{ backgroundImage: 'url(/api/uploads/bigdata-bg.jpg)' }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-purple-900/90 via-indigo-900/85 to-blue-900/90" />
             <div className="relative max-w-7xl mx-auto px-6 py-8">
@@ -29,7 +29,7 @@ export default function RootLayout({
                 {/* Student photo */}
                 <div className="flex-shrink-0">
                   <Avatar
-                    src="/uploads/student-photo.jpg"
+                    src="/api/uploads/student-photo.jpg"
                     alt="Reyna Saravia Andrea"
                     fallback="RA"
                     className="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover border-4 border-white/40 shadow-lg"
@@ -51,7 +51,7 @@ export default function RootLayout({
                   {/* Teacher */}
                   <div className="flex flex-col items-center gap-2">
                     <Avatar
-                      src="/uploads/teacher-photo.jpg"
+                      src="/api/uploads/teacher-photo.jpg"
                       alt="Claudio Isaias Huancahuire Bravo"
                       fallback="CH"
                       className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-white/40 shadow-md"

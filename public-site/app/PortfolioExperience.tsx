@@ -111,7 +111,7 @@ export default function PortfolioExperience({ sections }: Props) {
 
       {view === 'inicio' && (
         <>
-          <section className="relative isolate overflow-hidden bg-slate-950 px-5 pb-20 pt-16 text-white sm:px-8 sm:pb-28 sm:pt-24" style={{ backgroundImage: 'linear-gradient(90deg, rgba(2,6,23,.97), rgba(2,6,23,.78)), url(/uploads/bigdata-bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}> 
+          <section className="relative isolate overflow-hidden bg-slate-950 px-5 pb-20 pt-16 text-white sm:px-8 sm:pb-28 sm:pt-24" style={{ backgroundImage: 'linear-gradient(90deg, rgba(2,6,23,.97), rgba(2,6,23,.78)), url(/api/uploads/bigdata-bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}> 
             <div className="absolute inset-0 -z-10 opacity-60" style={{ backgroundImage: 'radial-gradient(circle at 20% 25%, #0e7490 0, transparent 31%), radial-gradient(circle at 80% 0%, #1d4ed8 0, transparent 28%)' }} />
             <div className="absolute -right-24 top-24 -z-10 h-80 w-80 rounded-full border border-cyan-300/20" />
             <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.2fr_.8fr] lg:items-center">
