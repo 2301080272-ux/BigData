@@ -64,43 +64,34 @@
     },
     {
       "id": "cmrl2p3he000769lcxbhx9gie",
-      "title": "Logros Curso PowerBI",
+      "title": "Introducción a la compilación con Power BI",
       "slug": ".....",
-      "body": "Cursos en PowerBI",
+      "body": "- Introducción\n- Usar Power BI\n- Bloques de creación de Power BI\n- Paseo por el servicio Power BI y uso",
       "order": 4,
       "createdAt": "2026-07-14T19:57:33.026Z",
-      "updatedAt": "2026-07-14T19:57:33.026Z",
+      "updatedAt": "2026-07-21T12:44:51.436Z",
       "files": [
         {
-          "id": "cmrl2pslg000969lcvmwoujum",
-          "filename": "1784059085569-WhatsApp_Image_2026-07-07_at_2.44.13_PM.jpeg",
-          "originalName": "WhatsApp Image 2026-07-07 at 2.44.13 PM.jpeg",
-          "mimeType": "image/jpeg",
-          "size": 100856,
-          "sectionId": "cmrl2p3he000769lcxbhx9gie",
-          "createdAt": "2026-07-14T19:58:05.573Z"
-        },
-        {
-          "id": "cmrl2zdzn000b69lc8l6qw17g",
-          "filename": "1784059533199-Logro2.png",
-          "originalName": "Logro2.png",
+          "id": "cmrunbobk0001414ihmcwzt3m",
+          "filename": "1784637894358-Logro1.png",
+          "originalName": "Logro1.png",
           "mimeType": "image/png",
-          "size": 303639,
+          "size": 276281,
           "sectionId": "cmrl2p3he000769lcxbhx9gie",
-          "createdAt": "2026-07-14T20:05:33.204Z"
+          "createdAt": "2026-07-21T12:44:54.365Z"
         }
       ],
       "links": [
         {
-          "id": "cmrl36szg000d69lc0xszcilg",
-          "title": "Logro 1",
+          "id": "cmrunbprm0003414inn8gfera",
+          "title": "Primer Logro",
           "url": "https://learn.microsoft.com/api/achievements/share/es-es/AndreaReynaSaravia-0290/H2M74WN8?sharingId=369264F5F69088C1",
           "order": 0,
           "sectionId": "cmrl2p3he000769lcxbhx9gie",
-          "createdAt": "2026-07-14T20:11:19.228Z"
+          "createdAt": "2026-07-21T12:44:56.242Z"
         }
       ]
     }
   ],
-  "publishedAt": "2026-07-14T20:11:35.075Z"
+  "publishedAt": "2026-07-21T12:45:25.051Z"
 }
