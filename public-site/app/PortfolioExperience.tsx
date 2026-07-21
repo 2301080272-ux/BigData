@@ -82,8 +82,8 @@ export default function PortfolioExperience({ sections }: Props) {
 
   const filtered = useMemo(() => {
     const term = query.trim().toLocaleLowerCase()
-    if (!term) return sections
-    return sections.filter((section) => `${section.title} ${section.body}`.toLocaleLowerCase().includes(term))
+    if (!term) return sections.filter((section) => !section.isAchievement)
+    return sections.filter((section) => !section.isAchievement && `${section.title} ${section.body}`.toLocaleLowerCase().includes(term))
   }, [query, sections])
 
   const achievements = sections.filter((section) => /logro|certific|curso/i.test(`${section.title} ${section.body}`))
