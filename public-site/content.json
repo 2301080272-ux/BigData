@@ -343,7 +343,100 @@
           "createdAt": "2026-07-21T19:02:29.049Z"
         }
       ]
+    },
+    {
+      "id": "cmrv154mb000etmocyme1vzbf",
+      "title": "Crear cálculos DAX en modelos semánticos",
+      "slug": "................",
+      "body": "- Crear tablas calculadas\n- Crear columnas calculadas\n- Comprender las medidas implícitas\n- Creación de medidas explícitas\n- Usar funciones iteradoras",
+      "order": 15,
+      "isAchievement": true,
+      "createdAt": "2026-07-21T19:11:43.523Z",
+      "updatedAt": "2026-07-21T19:11:43.523Z",
+      "files": [
+        {
+          "id": "cmrv15ses000gtmocnv8hkprf",
+          "filename": "1784661134351-Logro10.png",
+          "originalName": "Logro10.png",
+          "mimeType": "image/png",
+          "size": 273375,
+          "sectionId": "cmrv154mb000etmocyme1vzbf",
+          "createdAt": "2026-07-21T19:12:14.357Z"
+        }
+      ],
+      "links": [
+        {
+          "id": "cmrv15tpc000itmochejk933i",
+          "title": "Decimo Logro ",
+          "url": "https://learn.microsoft.com/api/achievements/share/es-es/AndreaReynaSaravia-0290/FEKMKREX?sharingId=369264F5F69088C1",
+          "order": 0,
+          "sectionId": "cmrv154mb000etmocyme1vzbf",
+          "createdAt": "2026-07-21T19:12:16.032Z"
+        }
+      ]
+    },
+    {
+      "id": "cmrv17zhu000ltmocucppyugj",
+      "title": "Introducción al análisis de un extremo a otro mediante Microsoft Fabric",
+      "slug": ".................",
+      "body": "- Exploración de análisis de un extremo a otro con Microsoft Fabric\n- Explora equipos de datos y Microsoft Fabric\n- Habilitación y uso de Microsoft Fabric",
+      "order": 17,
+      "isAchievement": true,
+      "createdAt": "2026-07-21T19:13:56.850Z",
+      "updatedAt": "2026-07-21T19:14:21.537Z",
+      "files": [
+        {
+          "id": "cmrv19dzl000ntmocmygrdsb4",
+          "filename": "1784661302283-Logro11.png",
+          "originalName": "Logro11.png",
+          "mimeType": "image/png",
+          "size": 275619,
+          "sectionId": "cmrv17zhu000ltmocucppyugj",
+          "createdAt": "2026-07-21T19:15:02.289Z"
+        }
+      ],
+      "links": [
+        {
+          "id": "cmrv19f2h000ptmoc2ns61bvd",
+          "title": "Onceavo Logro",
+          "url": "https://learn.microsoft.com/api/achievements/share/es-es/AndreaReynaSaravia-0290/H2Q7MPD8?sharingId=369264F5F69088C1",
+          "order": 0,
+          "sectionId": "cmrv17zhu000ltmocucppyugj",
+          "createdAt": "2026-07-21T19:15:03.689Z"
+        }
+      ]
+    },
+    {
+      "id": "cmrv1al84000qtmocdsdye26j",
+      "title": "Descripción del análisis de datos",
+      "slug": "..................",
+      "body": "- Información general sobre el análisis de datos\n- Roles en los datos\n- Tareas de un analista de datos\n- Comprobación de conocimientos",
+      "order": 18,
+      "isAchievement": true,
+      "createdAt": "2026-07-21T19:15:58.324Z",
+      "updatedAt": "2026-07-21T19:15:58.324Z",
+      "files": [
+        {
+          "id": "cmrv1ci8o000stmocsycr6obc",
+          "filename": "1784661447763-Logro12.png",
+          "originalName": "Logro12.png",
+          "mimeType": "image/png",
+          "size": 270515,
+          "sectionId": "cmrv1al84000qtmocdsdye26j",
+          "createdAt": "2026-07-21T19:17:27.768Z"
+        }
+      ],
+      "links": [
+        {
+          "id": "cmrv1cj87000utmoc2hkdj7c0",
+          "title": "Doceavo Logro",
+          "url": "https://learn.microsoft.com/api/achievements/share/es-es/AndreaReynaSaravia-0290/FEKM4E5X?sharingId=369264F5F69088C1",
+          "order": 0,
+          "sectionId": "cmrv1al84000qtmocdsdye26j",
+          "createdAt": "2026-07-21T19:17:29.047Z"
+        }
+      ]
     }
   ],
-  "publishedAt": "2026-07-21T19:02:40.464Z"
+  "publishedAt": "2026-07-21T19:17:40.493Z"
 }
